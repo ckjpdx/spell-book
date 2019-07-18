@@ -44,7 +44,7 @@ class SpellDirectory extends React.Component {
               </li>
             );
 
-          }
+          } else return null;
         })}
         </ul>
         <style jsx>{`

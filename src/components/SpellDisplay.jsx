@@ -1,12 +1,9 @@
 import React from 'react';
-import { connect, dispatch } from 'react-redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { toggleKnown } from '../actions';
 
 class SpellDisplay extends React.Component {
-  constructor(props){
-    super(props);
-  }
 
   handleIsKnownCheckbox = () => {
     this.props.dispatch(toggleKnown(this.props.selectedSpell, this.props.spellCache, this.props.mySpells));

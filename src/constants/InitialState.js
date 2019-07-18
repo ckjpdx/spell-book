@@ -22,5 +22,4 @@ export const initialState = {
     spellList: []
   },
   spellCache: cachedSpells,
-  mySpells: {}
 };
