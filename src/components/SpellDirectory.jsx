@@ -28,6 +28,7 @@ class SpellDirectory extends React.Component {
     return (
       <div className="spell-directory">
         <h3>Spell Directory</h3>
+        <p>Powered by www.dnd5eapi.co</p>
         <input placeholder="Search" onChange={this.handleSearchInput.bind(this)}></input>
         <ul>
           {this.props.spellList.map(spell => {

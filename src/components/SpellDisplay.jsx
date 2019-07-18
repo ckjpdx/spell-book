@@ -12,7 +12,11 @@ class SpellDisplay extends React.Component {
   render(){
     let spellDisplayArea = <h3>No Spell Selected</h3>;
     const spellDesc = this.props.currentSpell.desc;
-    const descDisplay = Array.isArray(spellDesc) ? spellDesc.map(paragraph => paragraph.replace(/â€™/gi, `'`).replace(/â€œ|â€�/gi, ``).replace(/â€”/g, `"`)) : null;
+    const descDisplay = Array.isArray(spellDesc) ? spellDesc.map(paragraph => paragraph
+      .replace(/â€™/gi, `'`)
+      .replace(/â€œ|â€�/gi, ``)
+      .replace(/â€”/g, `"`))
+      : null;
 
     if (this.props.selectedSpell) {
       spellDisplayArea = (
@@ -27,7 +31,7 @@ class SpellDisplay extends React.Component {
         </div>
       );
     }
-    return <div className="spell-display">{spellDisplayArea}</div>;
+    return <div className="SpellDisplay">{spellDisplayArea}</div>;
   }
 }
 
