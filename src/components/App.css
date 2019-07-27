@@ -3,7 +3,6 @@
 }
 
 .App {
-  /* display: flex; */
   text-align: center;
 }
 
@@ -27,11 +26,13 @@
 }
 
 main {
-  width: 100%;
   display: flex;
 }
-main > div {
-  flex-grow: 1;
+main > div:nth-child(odd) {
+  width: 25%;
+}
+main > div:nth-child(even) {
+  width: 50%;
 }
 
 .spell-directory, .spell-display, .spell-book {
@@ -40,7 +41,7 @@ main > div {
 }
 
 .spell-display {
-  width: 60%;
+  width: 50%;
 }
 
 @keyframes App-logo-spin {
